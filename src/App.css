@@ -1,5 +1,8 @@
 .App{
   min-height: 100vh;
+}
+
+.container{
   max-width: 1200px;
   margin: auto;
   padding: 10px 10px;
