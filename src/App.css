@@ -1,43 +1,43 @@
-.App{
+.App {
   min-height: 100vh;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: auto;
   padding: 10px 10px;
 }
 
-header{
+header {
   min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   margin-bottom: 70px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 5px;
   box-shadow: var(--box-shadow);
 }
 
-header .logo{
+header .logo {
   display: flex;
   align-items: center;
 }
 
-header .logo img{
+header .logo img {
   max-width: 40px;
   cursor: pointer;
 }
 
-header .logo span{
+header .logo span {
   font-size: 22px;
   margin-left: 7px;
   cursor: pointer;
   color: #525252;
 }
 
-header .themeSelector span{
+header .themeSelector span {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -47,7 +47,7 @@ header .themeSelector span{
   border: 1px solid #dfdfdf;
 }
 
-header .themeSelector .activeTheme{
+header .themeSelector .activeTheme {
   height: 30px;
   width: 30px;
 }
@@ -55,32 +55,32 @@ header .themeSelector .activeTheme{
 .addTask {
   padding: 20px 15px;
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   max-width: 500px;
   margin: 20px auto;
   box-shadow: var(--box-shadow);
 }
 
-.addTask form{
+.addTask form {
   display: flex;
   gap: 7px;
 }
 
-.addTask form input{
+.addTask form input {
   flex-grow: 1;
   padding: 5px 5px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #fafafa;
   border-radius: 5px;
   font-size: 18px;
 }
 
-.addTask form input:focus{
+.addTask form input:focus {
   outline: 0.5px solid #eaeaea;
 }
 
-.addTask form button{
+.addTask form button {
   background-color: #03ba5c;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   padding: 5px 20px;
   border-radius: 5px;
@@ -88,36 +88,36 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.addTask form button:hover{
+.addTask form button:hover {
   background-color: #03b056;
 }
 
-.showTask{
+.showTask {
   padding: 20px 15px;
   border-radius: 5px;
-  background-color: #FFFFFF;
+  background-color: #fdf8f8;
   margin: 20px auto;
   box-shadow: var(--box-shadow);
 }
 
-.showTask div.head{
+.showTask div.head {
   padding: 10px 0px 20px 0px;
   border-bottom: 1px solid #dfdfdf;
   display: flex;
   align-items: center;
 }
 
-.showTask div.head div{
+.showTask div.head div {
   flex-grow: 1;
 }
 
-.showTask .title{
+.showTask .title {
   font-size: 18px;
   font-weight: 600;
   user-select: none;
 }
 
-.showTask .count{
+.showTask .count {
   background-color: #dfdfdf;
   color: #525252;
   padding: 5px 10px;
@@ -126,21 +126,22 @@ header .themeSelector .activeTheme{
   user-select: none;
 }
 
-.showTask .clearAll{
+.showTask .clearAll {
   background-color: #0f6af3;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
   border: 0px;
   font-size: 16px;
+  float: right;
 }
 
-.showTask .clearAll:hover{
+.showTask .clearAll:hover {
   background-color: #1061db;
 }
 
-.showTask ul{
+.showTask ul {
   margin: 30px 5px 20px 5px;
   display: flex;
   flex-direction: row;
@@ -149,7 +150,7 @@ header .themeSelector .activeTheme{
   gap: 15px;
 }
 
-.showTask li{
+.showTask li {
   padding: 15px 10px;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
@@ -159,41 +160,75 @@ header .themeSelector .activeTheme{
   border-radius: 5px;
   border-left: 5px solid #1365dfaf;
 }
-
-.showTask li:hover{
-  background-color: #f8f8f8;
-}
-
-.showTask li p{
+.showTask li p {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.showTask li .name{
+.showTask li .name {
   font-size: 18px;
   padding-bottom: 5px;
 }
 
-.showTask li .time{
+.showTask li .time {
   font-size: 12px;
   color: #737373;
 }
 
-.showTask i.bi-pencil-square{
+.showTask i.bi-pencil-square {
   font-size: 18px;
-  color: #1363DF;
+  color: #1363df;
   cursor: pointer;
 }
 
-.showTask i.bi-trash{
+.showTask i.bi-trash {
   font-size: 18px;
-  color: #D82148;
+  color: #d82148;
   cursor: pointer;
 }
+.showTask button.finish {
+  font-size: 12px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.showTask button.inprogress {
+  font-size: 12px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+.showTask button.pending {
+  font-size: 12px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+.showTask button {
+  margin-top: 10px;
+  margin-right: 5px;
+  border: white;
+  border-radius: 2px;
+  padding: 5px;
+}
 
+.finished {
+  background-color: rgb(154, 243, 154);
+  color: rgb(12, 12, 12);
+}
+
+.in-progress {
+  background-color: rgb(245, 188, 83);
+  color: rgb(16, 15, 15);
+}
+
+.to-be-done {
+  background-color: rgb(250, 145, 145);
+  color: rgb(13, 13, 13);
+}
 @media only screen and (max-width: 800px) {
-  .showTask li{
+  .showTask li {
     width: 100%;
   }
 }
